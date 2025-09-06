@@ -27,12 +27,24 @@ export default function App() {
   const images = [
     {
       id: 1,
-      src: "/img/Movie1.jpg",
+      src: "https://cdn.district.in/movies-assets/images/cinema/p%20Chainsaw-Man---The-Movie--Reze-Arc-ee51dd10-4298-11f0-aa9f-8fefdb33bbbf.jpg",
       label: "Chainsaw Man – The Movie: Reze Arc",
     },
-    { id: 2, src: "/img/Movie2.jpg", label: "Param Sundari" },
-    { id: 3, src: "/img/Movie3.jpg", label: "The Conjuring: Last Rites" },
-    { id: 4, src: "/img/Movie4.jpg", label: "Demon Slayer Infinity Castle" },
+    {
+      id: 2,
+      src: "https://cdn.district.in/movies-assets/images/cinema/Param-Sundari_Poster-ef520680-7773-11f0-8df3-db01d1baa444.jpg",
+      label: "Param Sundari",
+    },
+    {
+      id: 3,
+      src: "https://preview.redd.it/new-poster-for-the-conjuring-last-rites-v0-4a68gyttrsif1.jpeg?width=640&crop=smart&auto=webp&s=ea9bd9c777f8d3cd4f7a1b51975e19911dbb6633",
+      label: "The Conjuring: Last Rites",
+    },
+    {
+      id: 4,
+      src: "https://cdn.district.in/movies-assets/images/cinema/Demon-Slayer--Kimetsu-no-Yaiba-a9b51c00-4534-11f0-aa9f-8fefdb33bbbf.jpg",
+      label: "Demon Slayer Infinity Castle",
+    },
   ];
 
   // Generate times dynamically (from 9 AM to 4 PM)
