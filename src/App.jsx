@@ -76,7 +76,7 @@ export default function App() {
 
   return (
     <div
-      className="min-h-screen flex items-start justify-center bg-cover bg-center pt-14"
+      className="min-h-screen flex items-start justify-center bg-cover bg-center pt-16"
       style={{
         backgroundImage:
           "url('https://img.freepik.com/free-vector/flat-design-movie-theater-background_23-2150998489.jpg?semt=ais_hybrid&w=740&q=80')",
@@ -132,14 +132,16 @@ export default function App() {
                     setSelectedImage(img);
                     setStep(3);
                   }}
-                  className="flex-shrink-0 w-48 cursor-pointer border rounded-xl p-2 hover:shadow-lg bg-transparent"
+                  className="flex-shrink-0 w-32 sm:w-48 cursor-pointer border rounded-xl p-2 hover:shadow-lg bg-transparent"
                 >
                   <img
                     src={img.src}
                     alt={img.label}
-                    className="rounded-lg w-full h-64 object-cover"
+                    className="rounded-lg w-full h-40 sm:h-64 object-cover"
                   />
-                  <p className="mt-2 text-sm font-medium">{img.label}</p>
+                  <p className="mt-2 text-xs sm:text-sm font-medium">
+                    {img.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -175,7 +177,7 @@ export default function App() {
             <h2 className="text-xl font-semibold mb-4">
               Jis bhi Times ap bolo Cutie 🤌
             </h2>
-            <div className="grid grid-rows-4 grid-cols-2 gap-3 justify-items-center">
+            <div className="grid grid-rows-4 grid-cols-2 gap-3">
               {times.map((time, idx) => (
                 <button
                   key={idx}
@@ -249,7 +251,7 @@ export default function App() {
             <img
               src="https://media.tenor.com/-HF7-xdOAAwAAAAj/bubu-dudu-bubu-dudu-shy.gif"
               alt="Img"
-              className="w-64 h-64 object-contain hover:scale-105 transition-transform"
+              className="w-32 h-32 mt-10 object-contain hover:scale-105 transition-transform"
             />
           </div>
         )}
