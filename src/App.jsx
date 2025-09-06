@@ -72,6 +72,8 @@ export default function App() {
     setStep(6);
   };
 
+  const lastBooking = storedData[storedData.length - 1]; // latest booking
+
   return (
     <div
       className="min-h-screen flex items-start justify-center bg-cover bg-center pt-14"
@@ -87,8 +89,29 @@ export default function App() {
             onClick={() => setStep(2)}
             className="mx-auto focus:outline-none"
           >
+            <div className="flex justify-center space-x-2 mb-2">
+              <span
+                className="text-3xl font-bold animate-bounce"
+                style={{ animationDelay: "0s" }}
+              >
+                Tap
+              </span>
+              <span
+                className="text-3xl font-bold animate-bounce"
+                style={{ animationDelay: "0.2s" }}
+              >
+                Tap
+              </span>
+              <span
+                className="text-3xl font-bold animate-bounce"
+                style={{ animationDelay: "0.4s" }}
+              >
+                Tap!!!
+              </span>
+            </div>
+
             <img
-              src="/img/3-1.thumb128.webp"
+              src="https://i.pinimg.com/originals/d8/13/74/d81374b9bf003f023635d6ce58fc3d3c.gif"
               alt="Start"
               className="w-64 h-64 object-contain hover:scale-105 transition-transform"
             />
@@ -98,7 +121,9 @@ export default function App() {
         {/* Step 2: Select a Movie */}
         {step === 2 && (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Select a Movie</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Koi si Movie Dekhne chloge mere saath 🥹!!
+            </h2>
             <div className="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
               {images.map((img) => (
                 <div
@@ -124,7 +149,9 @@ export default function App() {
         {/* Step 3: Select a Date */}
         {step === 3 && selectedImage && (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Select a Date</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Plzz date bhi bta do chlo 🥹....
+            </h2>
             <div className="flex flex-wrap gap-2 justify-center max-h-64 overflow-y-auto no-scrollbar">
               {dates.map((date, idx) => (
                 <button
@@ -145,7 +172,9 @@ export default function App() {
         {/* Step 4: Select a Time (2×4 grid centered) */}
         {step === 4 && selectedDate && (
           <div>
-            <h2 className="text-xl font-semibold mb-4">Available Times</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Jis bhi Times ap bolo Cutie 🤌
+            </h2>
             <div className="grid grid-rows-4 grid-cols-2 gap-3 justify-items-center">
               {times.map((time, idx) => (
                 <button
@@ -166,7 +195,9 @@ export default function App() {
         {/* Step 5: Booking Summary centered */}
         {step === 5 && selectedTime && (
           <div className="flex flex-col items-center">
-            <h2 className="text-xl font-semibold mb-4">Booking Summary</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Great now just send me the ss or next page 🥰🥰🥰
+            </h2>
             <div className="bg-transparent p-4 rounded-lg text-left w-80">
               <p>
                 <strong>Movie:</strong> {selectedImage.label}
@@ -183,7 +214,7 @@ export default function App() {
                 onClick={confirmBooking}
                 className="px-6 py-2 border border-black rounded-lg hover:bg-black hover:text-white transition"
               >
-                Confirm Booking
+                Thank you jii 🫠!!..
               </button>
             </div>
           </div>
@@ -192,7 +223,11 @@ export default function App() {
         {/* Step 6: Stored Bookings centered */}
         {step === 6 && (
           <div className="flex flex-col items-center">
-            <h2 className="text-xl font-semibold mb-4">All Stored Bookings</h2>
+            {lastBooking && (
+              <h2 className="text-xl font-semibold mb-4">
+                Now i will wait till {lastBooking.date} 💝🥰
+              </h2>
+            )}
             <ul className="text-left space-y-2 w-80">
               {storedData.map((booking, idx) => (
                 <li
@@ -211,6 +246,11 @@ export default function App() {
                 </li>
               ))}
             </ul>
+            <img
+              src="https://media.tenor.com/-HF7-xdOAAwAAAAj/bubu-dudu-bubu-dudu-shy.gif"
+              alt="Img"
+              className="w-64 h-64 object-contain hover:scale-105 transition-transform"
+            />
           </div>
         )}
       </div>
