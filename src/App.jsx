@@ -63,7 +63,10 @@ export default function App() {
   return (
     <div
       className="min-h-screen flex items-start justify-center bg-cover bg-center pt-14"
-      style={{ backgroundImage: "url('/img/background.jpg')" }}
+      style={{
+        backgroundImage:
+          "url('https://img.freepik.com/free-vector/flat-design-movie-theater-background_23-2150998489.jpg?semt=ais_hybrid&w=740&q=80')",
+      }}
     >
       <div className="bg-transparent p-8 w-full max-w-3xl text-center min-h-[70vh]">
         {/* Step 1: Start button */}
