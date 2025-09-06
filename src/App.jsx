@@ -198,7 +198,7 @@ export default function App() {
         {step === 5 && selectedTime && (
           <div className="flex flex-col items-center">
             <h2 className="text-xl font-semibold mb-4">
-              Great now just send me the ss or next page 🥰🥰🥰
+              Great now just send me the ss of next page 🥰🥰🥰
             </h2>
             <div className="bg-transparent p-4 rounded-lg text-left w-80">
               <p>
